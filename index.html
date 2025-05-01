@@ -6,8 +6,11 @@
   <title>Chiaki's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/2c3321e200.js" crossorigin="anonymous"></script>
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <!-- ナビゲーション -->
   <header>
@@ -34,34 +37,41 @@
   </header>
 
   <!-- ヒーローセクション -->
-  <section class="hero">
+  <section class="hero container">
     <div class="hero-img">
       <img src="images/chiaki-surfboard.JPG" class="chiaki-surf" alt="chiaki-surf" />
     </div>
     <div class="hero-text">
-      <h1>Hello.<br>I am <span class="highlight">Chiaki</span>.</h1>
+      <h1>Hello<sapn class="highlight">.</sapn><br>I am <br>Chiaki<span class="highlight">.</span></h1>
+      <div class="hero-border"></div>
       <p>Front-end engineer based in New Zealand. I hope my skills can help your projects and contribute across the world.</p>
-      <p class="jp-text">（私のスキルが皆様のプロジェクトに役立つことで、世界中で貢献していきたいです。）</p>
-      <form class="contact-form" action="https://formspree.io/f/movepgkn" method="post">
-        <input type="email" name="email" placeholder="Your email address" required />
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <button type="submit">CONTACT ME</button>
+      <p class="jp-text">私のスキルが誰かの役に立ち、世界のどこかで小さな助けになれたら嬉しいです。</p>
+      <form class="contact" action="https://formspree.io/f/movepgkn" method="post">
+        <div class="contact-form">
+          <input type="email" name="email" placeholder="Your email address" required />
+          <textarea name="message" placeholder="Your message" required></textarea>
+        </div>
+        <button type="submit">>> CONTACT <<</button>
       </form>
     </div>
   </section>
 
   <!-- AMOUT ME セクション -->
-   <section id="about">
+   <section id="about" class="about container">
     <h2>ABOUT ME</h2>
-    <div class="about-image">
-      <img src="images/chiaki-rotorua.jpg" alt="chiaki-rotorua" />
-    </div>
+    <div class="about-content">
+      <div class="about-text">
         <h3>Front-end engineer </h3>
         <p>Hi! My name is Chiaki. I was born and raised in Osaka, Japan and have been living in Auckland, New Zealand since 2022. I love traveling the world, exproaring beaches, playing a ukulele and creating things on the web.</p>
+      </div>
+      <div class="about-image">
+        <img src="images/chiaki-rotorua.jpg" class="chiaki-rotorua" alt="chiaki-rotorua" />
+      </div>
+    </div>
    </section>
 
    <!-- WORKS セクション -->
-    <section id="works">
+    <section id="works" class="works container">
       <h2>WORKS</h2>
       <div class="card-container">
         <div class="card">
@@ -83,7 +93,7 @@
     </section>
 
    <!-- SKILLS セクション -->
-    <section id="skills">
+    <section id="skills" class="skills container">
       <h2>SKILLS</h2>
       <div class="skill-icons container">
         <div class="skill-card">
@@ -114,14 +124,16 @@
     </section>
 
     <!-- EXPERIENCE セクション -->
-     <section id="experience">
+     <section id="experience" class="experience container">
       <h2>EXPERIENCE</h2>
       <p>Customer service & Accounts/Administrator at a fiberglass company in New Zealand. Currently studying programming and design for my new career and new life!</p>
      </section>
 
   <!-- その他セクション -->
   <footer>
-    <p>&copy; 2025 Chiaki</p>
+    <div class="footer">
+      <p>&copy; 2025 Chiaki</p>
+    </div>
   </footer>
 </body>
 </html>

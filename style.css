@@ -19,15 +19,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #fff;
-    color: #333;
+    color: rgb(113, 50, 4, 1);
     max-width: 1920px; /* 基準を1920pxにする */
     margin: 0 auto;
     font-size: 16px;        /* デフォルト文字サイズ */
     line-height: 1.6;       /* 行間：1.5〜1.8が読みやすい */
-}
-
-h1 {
-    font-size: 2rem;
 }
 
 p {
@@ -67,9 +63,22 @@ p {
   }
 }
 
-
 .container {
-padding: 0% 8%;
+  padding: 0 10%;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  border-top: 2px solid #f96e46;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: rgb(113, 50, 4, 0.7);
 }
 
 /* ナビバー */
@@ -83,7 +92,7 @@ header {
 }
 
 .logo-icons{
-    border-bottom: 4px solid #f96e46; /* ←ここを追加！ */
+    border-bottom: 2px solid #f96e46;
     padding-top: 1rem; /* 線とリンクの間に余白をつけたい場合 */
     display: flex;
     justify-content: space-between;
@@ -92,7 +101,6 @@ header {
 
 .logo {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(113, 50, 4);
     font-size: 34px;
 }
 
@@ -100,14 +108,14 @@ header {
     display: flex;
     gap: 0.8rem;
     width: fit-content;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 .contact-icons a {
     display: inline-flex;
     margin-bottom: 0.8rem;
-    color: rgb(113, 50, 4);
     text-decoration: none;
+    color: rgb(113, 50, 4, 0.7);
 }
 
 .nav-lists {
@@ -122,30 +130,171 @@ header {
     text-align: center;
     padding: 0;
     margin: 0;
+    color: rgb(113, 50, 4, 0.7);
 }
 
 /* HERO section */
 
 .hero {
     display: flex;
+    height: 600px;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+    font-family: Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+}
+
+.highlight {
+    color: #f96e46;
 }
 
 .hero-img {
+    height: 100%;
     width: 50%;
     object-position: 50% 50%;
-}
-
-.hero-text{
-    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chiaki-surf {
-  width: 100%;
-  height: 680px; /* 必要に応じて調整 */
-  object-fit: cover;
-  object-position: auto 60%;
-  /* ↑ 上40%をカット → 下60%を表示、左右は自動で中心 (あんま理解してない) */
+    width: 100%;
+    height: 600px; /* 必要に応じて調整 */
+    object-fit: cover;
+    object-position: center 80%;
+    /* ↑ 上40%をカット → 下60%を表示、左右は自動で中心 (あんま理解してない) */
+  }
+
+.hero-text {
+    width: 50%;
 }
+
+.hero-text h1{
+    padding: 1rem 2rem;
+}
+
+.hero-border {
+    border-bottom: 2px solid #f96e46;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hero-text p {
+    padding: 0 2rem;
+}
+
+.jp-text {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+form.contact{
+  display: flex;
+  margin: 1.5rem 2rem 0 2rem;
+}
+
+.contact {
+    height: 133px;
+}
+
+.contact-form {
+  display: block;
+  width: 70%;
+  margin-right: 5px;
+}
+
+.contact-form input[type="email"] {
+  width: 60%; /* inputだけ幅狭く */
+  height: 25%;
+}
+
+textarea {
+  resize: none; /* リサイズできないようにする */
+  overflow: auto; /* はみ出したらスクロールバー出す */
+  overflow-y: auto;   /* 縦スクロールだけ出す */
+  overflow-x: hidden; /* 横スクロールは出さない */
+  height: 97px;
+  margin-top: auto;
+}
+
+input,
+textarea {
+  border: 1px solid #f96e46; /* 線の色：オレンジ */
+  color:#333 ;             /* 入力文字の色 */
+  font-size: 12px;            /* 入力文字の大きさ */
+  padding: 8px;               /* 中の余白（ふわっと感出る） */
+  margin-bottom: 0.2rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;                /* プレースホルダーの文字色（薄めに） */
+  font-size: 14px;            /* プレースホルダーの文字サイズ */
+  font-family: inherit;   /* これも入れておくと差が出にくくなる */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ff6600; /* フォーカス中の線の色（濃いオレンジ） */
+  outline: none;         /* デフォの青い枠消す */
+}
+
+
+.contact button {
+  width: 20%;
+  height: 30%;
+  padding: 0.3rem 0;
+  background-color: rgb(249, 110, 70, 0.8);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+button[type="submit"] {
+  margin-top: auto;
+}
+
+
+
+/* AMOUT ME section */
+.about-image {
+  height: 100%;
+  width: 50%;
+  object-position: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chiaki-rotorua {
+    width: 100%;
+    height: 600px; /* 必要に応じて調整 */
+    object-fit: cover;
+    object-position: center 80%;
+    /* ↑ 上40%をカット → 下60%を表示、左右は自動で中心 (あんま理解してない) */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-text {
+  width: 50%;
+  padding: 0 10% 0 10%;
+}
+
+.about-text p {
+  margin-top: 1rem;
+}
+
 
 /* skills section */
 .skill-icons {
@@ -182,3 +331,15 @@ header {
     font-size: 14px;
   }
   
+
+  /* footer */
+  footer {
+    background-color: #f4f4f4;
+    padding-top: 1rem;
+    padding: 2% 10% 1% 10%
+  }
+
+  footer p {
+    font-size: 12px;
+    text-align: center;
+  }
