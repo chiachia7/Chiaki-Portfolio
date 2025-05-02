@@ -81,6 +81,7 @@ p {
   color: rgb(113, 50, 4, 0.7);
 }
 
+
 /* ナビバー */
 header {
     background-color: #f4f4f4;
@@ -293,6 +294,34 @@ button[type="submit"] {
 
 .about-text p {
   margin-top: 1rem;
+}
+
+/* WORKS section*/
+h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+h3 a:hover {
+  text-decoration: underline;
+  color: #f96e46;
+}
+
+.card-container {
+  margin-top: 1.5rem;
+}
+
+/*　cardの中を横並びにしたい　*/
+#works .card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.work-img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 
